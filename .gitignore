@@ -1,0 +1,18 @@
+# Security
+.env
+
+# Python compilation artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+
+# Local data files
+*.csv
+*.parquet
+/data/
