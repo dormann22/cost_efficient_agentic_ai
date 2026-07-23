@@ -1,0 +1,19 @@
+project:
+  name: agentprep
+  seed: 42
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  logs: logs
+
+# Datasets. Active selects which one the pipeline uses.
+data:
+  active: adult
+  catalog:
+    adult:
+      target_column: income
+      task: classification
+      positive_class: ">50K"    # defines what F1 is computed against
+      test_size: 0.2
+      source_url: ""

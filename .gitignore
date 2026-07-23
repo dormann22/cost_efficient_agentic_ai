@@ -3,6 +3,8 @@
 
 # Python compilation artifacts
 __pycache__/
+.pytest_cache/
+*.pyc
 *.py[cod]
 *$py.class
 
@@ -11,8 +13,8 @@ __pycache__/
 venv/
 env/
 
-
-# Local data files
-*.csv
-*.parquet
-/data/
+# Data & logs: keep the folders (via .gitkeep) but not their contents.
+data/raw/*
+data/processed/*
+logs/*
+!**/.gitkeep

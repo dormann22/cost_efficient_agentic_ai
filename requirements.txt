@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+lightgbm
+pyarrow
+pyyaml
+pydantic
+python-dotenv
+pytest
