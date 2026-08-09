@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from functools import lru_cache
 from pathlib import Path
 
 import yaml
@@ -105,7 +104,6 @@ class Config(BaseModel):
         rel = getattr(self.paths, key)
         return (REPO_ROOT / rel).resolve()
 
-@lru_cache(maxsize=1)
 def load_config(path: str | Path = DEFAULT_CONFIG_PATH) -> Config:
     path = Path(path)
     if not path.exists():

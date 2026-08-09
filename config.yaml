@@ -17,3 +17,25 @@ data:
       positive_class: ">50K"    # defines what F1 is computed against
       test_size: 0.2
       source_url: ""
+
+models:
+  big:
+    provider: openai
+    name: gpt-4o
+    # temperature: 0.0
+    # base_url: null
+  small:
+    provider: openai
+    name: gpt-4o-mini
+
+evaluation:
+  downstream_model: logistic_regression
+  metric: f1
+  # f1_average: binary
+
+cost:
+  pricing: {}
+
+budget:
+  max_retries: 3
+  max_usd_per_run: 5

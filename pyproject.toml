@@ -5,17 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "agentprep"
 version = "0.0.1"
-description = "Cost-efficient agentic AI for tabular data preprocessing (MSc thesis)"
+description = "Cost-efficient agentic AI for tabular preprocessing"
 readme = "README.md"
 requires-python = ">=3.10"
 
-# Runtime deps are pinned in requirements.txt (base) and requirements-llm.txt
-# (added in Phase 2). Kept out of here so `pip install -e .` stays fast and the
-# pins live in one obvious place.
+# Runtime deps are pinned in requirements.txt
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.pytest.ini_options]
-pythonpath = ["src"]
-testpaths = ["tests"]
