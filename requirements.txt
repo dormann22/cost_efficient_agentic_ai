@@ -7,3 +7,4 @@ pyyaml
 pydantic
 python-dotenv
 pytest
+langchain-core>=0.3.0
