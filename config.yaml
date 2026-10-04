@@ -14,7 +14,7 @@ data:
     adult:
       target_column: income
       task: classification
-      positive_class: ">50K"    # defines what F1 is computed against
+      positive_class: ">50K"
       test_size: 0.2
       source_url: ""
 
@@ -29,7 +29,10 @@ models:
     name: gpt-4o-mini
 
 evaluation:
-  downstream_model: logistic_regression
+  # Fixed baseline for now (RandomForestClassifier, see agentprep.evaluation).
+  # Future plan: the agent chooses among several models (and task types,
+  # classification vs. regression) based on the preprocessed data.
+  downstream_model: random_forest
   metric: f1
   # f1_average: binary
 

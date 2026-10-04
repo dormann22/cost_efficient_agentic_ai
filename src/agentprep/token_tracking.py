@@ -1,12 +1,3 @@
-"""Token and $ cost tracing for LLM-calling agents.
-
-Works against any iterable of LangChain messages (e.g. a LangGraph run's
-`result["messages"]`) — it does not depend on any particular agent
-implementation. Costs are computed from `config.yaml`'s `cost.pricing`
-table; a model with no pricing entry contributes $0 rather than raising,
-since that table may not be filled in yet.
-"""
-
 from __future__ import annotations
 
 import csv
